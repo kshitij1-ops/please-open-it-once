@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm So Sorry, Siya ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .handwriting { font-family: 'Caveat', cursive; }
+        .serif-font { font-family: 'Playfair Display', serif; }
+        
+        /* Floating background elements */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+        .floating { animation: float 4s ease-in-out infinite; }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .glow-bg { animation: pulseGlow 6s ease-in-out infinite; }
+
+        /* Polaroid Hover Effects */
+        .polaroid {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .polaroid:hover {
+            transform: scale(1.08) rotate(0deg) !important;
+            z-index: 30;
+            box-shadow: 0 20px 30px -10px rgba(225, 29, 72, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen relative flex flex-col justify-between selection:bg-rose-500 selection:text-white">
+
+    <!-- Ambient Glowing Background Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-rose-600/20 rounded-full blur-3xl glow-bg"></div>
+        <div class="absolute top-1/2 -right-32 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl glow-bg" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-amber-600/15 rounded-full blur-3xl glow-bg" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto px-4 py-10 w-full flex-grow flex flex-col items-center z-10">
+        
+        <!-- Flashy Header Banner -->
+        <div class="text-center mb-10 floating">
+            <span class="inline-flex items-center gap-2 bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-500/30 text-rose-300 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 shadow-lg backdrop-blur-md">
+                ✨ A Sincere Message For Someone Extra Special
+            </span>
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-pink-300 to-amber-200">
+                I am truly sorry, Siya.
+            </h1>
+        </div>
+
+        <!-- Dynamic Photo Collage Section -->
+        <section class="w-full mb-14">
+            <h2 class="text-center text-xs uppercase tracking-widest text-rose-400/80 mb-6 font-semibold">Memories of your wonderful smile</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 px-2">
+                
+                <!-- Photo 1: siya.jpg -->
+                <div class="polaroid bg-white p-3 pb-5 rounded-lg shadow-2xl border border-rose-100/20 transform -rotate-3 text-slate-800">
+                    <div class="aspect-[3/4] overflow-hidden rounded mb-3 bg-slate-100">
+                        <img src="siya.jpg" alt="Siya portrait" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/ffe4e6/be123c?text=Siya+%E2%99%A5'">
+                    </div>
+                    <p class="handwriting text-center text-xl text-rose-700 leading-none">Graceful ✨</p>
+                </div>
+
+                <!-- Photo 2: 17.jpg -->
+                <div class="polaroid bg-white p-3 pb-5 rounded-lg shadow-2xl border border-rose-100/20 transform rotate-2 text-slate-800 md:mt-4">
+                    <div class="aspect-[3/4] overflow-hidden rounded mb-3 bg-slate-100">
+                        <img src="17.jpg" alt="Siya laughing" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/ffe4e6/be123c?text=Pure+Joy'">
+                    </div>
+                    <p class="handwriting text-center text-xl text-rose-700 leading-none">Unfiltered Joy 😄</p>
+                </div>
+
+                <!-- Photo 3: 8.jpg -->
+                <div class="polaroid bg-white p-3 pb-5 rounded-lg shadow-2xl border border-rose-100/20 transform -rotate-2 text-slate-800 col-span-2 md:col-span-1">
+                    <div class="aspect-[3/4] overflow-hidden rounded mb-3 bg-slate-100">
+                        <img src="8.jpg" alt="Siya smiling" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/ffe4e6/be123c?text=Warm+Smile'">
+                    </div>
+                    <p class="handwriting text-center text-xl text-rose-700 leading-none">Warmest Smile 🌟</p>
+                </div>
+
+                <!-- Photo 4: 15.jpeg -->
+                <div class="polaroid bg-white p-3 pb-5 rounded-lg shadow-2xl border border-rose-100/20 transform rotate-3 text-slate-800">
+                    <div class="aspect-[3/4] overflow-hidden rounded mb-3 bg-slate-100">
+                        <img src="15.jpeg" alt="Siya portrait indoor" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/ffe4e6/be123c?text=Siya'">
+                    </div>
+                    <p class="handwriting text-center text-xl text-rose-700 leading-none">Radiant 🌸</p>
+                </div>
+
+                <!-- Photo 5: 12.jpeg -->
+                <div class="polaroid bg-white p-3 pb-5 rounded-lg shadow-2xl border border-rose-100/20 transform -rotate-1 text-slate-800 md:mt-4">
+                    <div class="aspect-[3/4] overflow-hidden rounded mb-3 bg-slate-100">
+                        <img src="12.jpeg" alt="Siya looking stylish" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/ffe4e6/be123c?text=Always+Best'">
+                    </div>
+                    <p class="handwriting text-center text-xl text-rose-700 leading-none">Effortless Cool 💫</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sincere Apology Letter Card -->
+        <div class="bg-slate-800/80 backdrop-blur-xl p-8 sm:p-10 rounded-3xl shadow-2xl border border-rose-500/20 w-full mb-10 space-y-5 text-slate-200 leading-relaxed text-base sm:text-lg relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-bl-full pointer-events-none"></div>
+            
+            <p class="serif-font text-2xl text-rose-300 italic">Dear Siya,</p>
+            
+            <p>
+                I am deeply, genuinely sorry for how foolishly and selfishly I acted recently. Calling you over a hundred times was completely wrong, unfair to you, and an overwhelming disturbance to your peace. I panicked and put immense pressure on you when you already have so much on your plate.
+            </p>
+            <p>
+                I know how important your work is, how busy your days get, and how vital your personal space is. Instead of making things comfortable for you, I let my own overthinking get the best of me and invaded your space. There is no excuse for what I did. You asked for space, and I should have respected that boundary without question.
+            </p>
+            <p>
+                Your peace of mind, your happiness, and your well-being mean the world to me. You are an incredible, hard-working person who deserves absolute respect and peace. I promise you with all my heart that I will never repeat this mistake or cross your boundaries again.
+            </p>
+            <p>
+                Beyond everything, I also just wanted to tell you how deeply I admire what you are accomplishing. To achieve so much at such a young age is genuinely extraordinary, and seeing your passion and drive truly inspires me every single day. You set the bar so high for yourself that sometimes I think you forget to pause, take a deep breath, and give yourself the credit you truly deserve. You might not always say it out loud, but what you are building and doing is amazing. I hope you give yourself a break once in a while and feel proud of how far you’ve come—because you deserve to feel every bit of that joy and pride.
+            </p>
+            <p>
+                Whenever you are ready—and with zero pressure at all—I would truly love if we could rebuild our friendship on a healthy, respectful note. But above all else, I just want you to be okay, happy, and thriving.
+            </p>
+
+            <div class="pt-4 border-t border-slate-700/60 flex justify-between items-center text-sm text-slate-400">
+                <span>With sincere accountability & respect,</span>
+                <span class="handwriting text-3xl text-rose-400">Bhondu</span>
+            </div>
+        </div>
+
+        <!-- Fun Interactive "Cheer Up" Box -->
+        <div class="bg-gradient-to-br from-slate-800 to-rose-950/40 p-8 rounded-3xl shadow-2xl border border-rose-500/30 w-full text-center space-y-6 relative overflow-hidden">
+            <div class="space-y-1">
+                <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-300 to-pink-200">The Siya Appreciation & Cheer-Up Station 🌸</h2>
+                <p class="text-xs text-slate-400 uppercase tracking-widest">Tap for a gentle dose of positivity</p>
+            </div>
+            
+            <div id="smileBox" class="bg-slate-900/80 border border-rose-500/20 text-rose-200 p-6 rounded-2xl font-medium min-h-[80px] flex items-center justify-center transition-all duration-300 text-lg shadow-inner">
+                Tap the button below whenever you need a tiny smile! ✨
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="triggerSmile()" class="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white font-semibold px-8 py-3.5 rounded-2xl shadow-lg shadow-rose-500/25 transition transform active:scale-95 cursor-pointer flex items-center gap-2 text-base">
+                    <span>Click for a Boost ✨</span>
+                </button>
+                <button onclick="triggerHearts()" class="bg-slate-700/80 hover:bg-slate-700 text-rose-300 font-semibold px-6 py-3.5 rounded-2xl border border-rose-500/30 transition transform active:scale-95 cursor-pointer text-base">
+                    Send Good Vibes 💖
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-slate-500 border-t border-slate-800 mt-10 z-10">
+        Created with genuine regret, respect, and best wishes for Siya.
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        const messages = [
+            "Siya, your dedication and hard work are super inspiring! 💪",
+            "Take all the time and space you need. Rooting for your success always! 🌟",
+            "Friendly reminder: Drink some water and take a well-deserved rest today! 💧",
+            "Your peace of mind and happiness will always matter most. 😊",
+            "Sending you endless calm moments, good vibes, and positivity! 🍀",
+            "You've got this! Keep shining bright like you always do. ✨"
+        ];
+
+        function triggerSmile() {
+            const box = document.getElementById('smileBox');
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            
+            box.style.opacity = '0';
+            box.style.transform = 'translateY(6px)';
+            
+            setTimeout(() => {
+                box.textContent = randomMsg;
+                box.style.opacity = '1';
+                box.style.transform = 'translateY(0px)';
+            }, 180);
+
+            // Trigger light confetti burst
+            confetti({
+                particleCount: 30,
+                spread: 60,
+                origin: { y: 0.8 },
+                colors: ['#f43f5e', '#fb7185', '#fde047']
+            });
+        }
+
+        function triggerHearts() {
+            confetti({
+                particleCount: 50,
+                angle: 90,
+                spread: 100,
+                origin: { y: 0.85 },
+                colors: ['#e11d48', '#f43f5e', '#fda4af']
+            });
+        }
+    </script>
+</body>
+</html>
